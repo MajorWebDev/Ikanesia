@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <title>IkaNesia</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div class="logo">IkanNesia
+            <button class="toggle search" onclick="showSearch()" id="toggle-search">
+                <ion-icon name="search" ></ion-icon>
+            </button>
+            <button class="toggle search" onclick="showSearch()" id="toggle-close-search">
+                <ion-icon name="close"></ion-icon>
+            </button>
+            <button class="toggle menu" onclick="showMenu()" id="toggle-menu">
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </div>
+        <div class="search-form" id="search">
+            <form>
+                <input type="text" placeholder="Cari Ikan..">
+                <button class="btn-search" v-on:click="click('hai '+name)"><img src="img/ico/search.svg" width="24px"></button>
+            </form>
+        </div>
+        <div class="nav-menu-overlay" id="nav-menu-overlay"></div>
+        <div class="nav-menu" id="nav-menu">
+            <div class="menu-list" id="active">
+                <div class="icon-menu">
+                    <ion-icon name="home"></ion-icon>
+                </div>
+                <div class="title-menu">Home</div>
+            </div>
+            <div class="menu-list">
+                <div class="icon-menu">
+                    <ion-icon name="heart"></ion-icon>
+                </div>
+                <div class="title-menu">Favorit</div>
+            </div>
+            <div class="menu-list">
+                <div class="icon-menu">
+                    <ion-icon name="chatbox-ellipses"></ion-icon>
+                </div>
+                <div class="title-menu">Chat</div>
+            </div>
+            <div class="menu-list">
+                <div class="icon-menu">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <div class="title-menu">Profil</div>
+            </div>          
+            <div class="menu-list">
+                <div class="icon-menu">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <div class="title-menu"><a href="auth/login.php">Login</a></div>
+            </div>            
+        </div>
+    </div>
+
+    <script src="header.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            // Your custom settings go here
+        });
+        lazyLoadInstance.update();
+
+        let xtoggle = false;
+        let searchBlock = document.getElementById("search");
+        document.getElementById("toggle-close-search").style.display = "none";
+
+        function showSearch() {
+            if (!xtoggle) {
+                searchBlock.style.display = "block";
+                document.getElementById("header").style.height = "10em";
+                document.getElementById("toggle-search").style.display = "none";
+                document.getElementById("toggle-close-search").style.display = "block";
+                xtoggle = true;
+            } else {
+                searchBlock.style.display = "none";
+                document.getElementById("header").style.height = "5em";
+                document.getElementById("toggle-search").style.display = "block";
+                document.getElementById("toggle-close-search").style.display = "none";
+                xtoggle = false;
+            }
+        }
+
+        function showMenu() {
+            document.getElementById("nav-menu").style.display = "flex";
+            document.getElementById("nav-menu-overlay").style.display = "block";
+            document.getElementById("nav-menu").style.animation = "navMenuShow 0.5s linear";
+        }
+
+        document.getElementById("nav-menu-overlay").addEventListener("click", closeMenu);
+
+        function closeMenu() {
+            document.getElementById("nav-menu").style.animation = "navMenuClose 0.5s linear";
+
+            var x = setInterval(close, 450);
+
+            function close() {
+                document.getElementById("nav-menu").style.display = "none";
+                document.getElementById("nav-menu-overlay").style.display = "none";
+                clearInterval(x);
+            }
+        }
+    </script>

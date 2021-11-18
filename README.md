@@ -1,3 +1,3 @@
-# Ikanesia
-Fish Store Website <br>
-ON PROGRESS
+# ikanesia
+Website Jual Beli Ikan
+Hanya Untuk Kalangan Team Developer FLAMBO
