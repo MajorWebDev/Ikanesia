@@ -72,7 +72,7 @@ if (!isset($_SESSION['user'])) {
                         <td><?=$data['harga']?></td>
                         <td><?=$data['status']?></td>
                         <td class="text-center">
-                        Ubah | 
+                        <a href="edit.php?id_ikan=<?=$data['id_ikan']?>">Ubah</a> | 
                         Hapus
                         </td>
                     </tr>
