@@ -73,7 +73,7 @@ if (!isset($_SESSION['user'])) {
                         <td><?=$data['status']?></td>
                         <td class="text-center">
                         <a href="edit.php?id_ikan=<?=$data['id_ikan']?>">Ubah</a> | 
-                        Hapus
+                        <a href="delete.php?id_ikan=<?=$data['id_ikan']?>" onclick="return confirm('Yakin akan menghapus data?')">Hapus</a>
                         </td>
                     </tr>
                 <?php
