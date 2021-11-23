@@ -40,7 +40,12 @@ if(isset($_POST['add'])) {
         $filebaru = $_FILES['gambar']['name'];
         $ukuran = $_FILES['gambar']['size'];
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
-
+		
+		$sql = "SELECT * FROM ikan WHERE id_ikan='$id_ikan'";
+		$query = mysqli_query($con, $sql) or die (mysqli_error());
+		$data = mysqli_fetch_array($query);
+		$patch = '../_asset/upload_gambar/'.$data['gambar'];
+		
         if(!in_array($ext,$ekstensi) ) {
             header("location:edit.php?id_ikan=$id_ikan&alert=gagal_ekstensi");
         } else{
@@ -49,18 +54,17 @@ if(isset($_POST['add'])) {
                 move_uploaded_file($_FILES['gambar']['tmp_name'], '../_asset/upload_gambar/'.$rand.'_'.$filebaru);
                 mysqli_query($con, "UPDATE ikan SET gambar = '$xx', nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
                 header("location:edit.php?id_ikan=$id_ikan&alert=berhasil");
+				
+				if(file_exists($patch)){
+				unlink($patch);
+				}
             } else{
                 header("location:edit.php?id_ikan=$id_ikan&alert=gagal_ukuran");
             }
         }
-    } else if(isset($_POST['edit'])) {
-        $id_ikan = trim(mysqli_real_escape_string($con, $_POST['id_ikan']));
-        $nama = trim(mysqli_real_escape_string($con, $_POST['nama']));
-        $deskripsi = trim(mysqli_real_escape_string($con, $_POST['deskripsi']));
-        $harga = trim(mysqli_real_escape_string($con, $_POST['harga']));
-        $status = trim(mysqli_real_escape_string($con, $_POST['status']));
+    } else {
         mysqli_query($con, "UPDATE ikan SET nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
-        echo "<script>window.location='data.php';</script>";
+        header("location:edit.php?id_ikan=$id_ikan&alert=berhasil");
     }
 }
 ?>

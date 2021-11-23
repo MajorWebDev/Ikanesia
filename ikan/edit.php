@@ -35,8 +35,8 @@ if (!isset($_SESSION['user'])) {
                 <h4>Success</h4>
                 Berhasil Disimpan								
     <?php
-            }
         }
+	}
     ?>
 
     <h1>Data Ikan</h1>
