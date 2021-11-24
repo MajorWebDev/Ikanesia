@@ -1,3 +1,16 @@
 # ikanesia
-Website Jual Beli Ikan
-Hanya Untuk Kalangan Team Developer FLAMBO
+Website Jual Beli Ikan Testing
+Hanya Untuk Kalangan Team Developer Major Web Developer
+
+Language Usage :
+
+● HTML
+● PHP
+● JavaScript
+● CSS
+
+Framework Usage :
+● VueJS
+
+Library Usage
+● SplideJS
