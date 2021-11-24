@@ -12,7 +12,6 @@ function rupiah($angka){
 }
 
 if ($result->num_rows > 0) {
-  // output data of each row
     while($row = $result->fetch_assoc()) {
     ?>
     <li class="splide__slide">
@@ -32,7 +31,7 @@ if ($result->num_rows > 0) {
     <?php
     }
 } else {
-  echo "0 results";
+    echo "0 results";
 }
 
 ?>

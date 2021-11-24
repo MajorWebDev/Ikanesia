@@ -134,16 +134,66 @@ a {
 .search-form .search-popup {
     margin-top: 0.5em;
     width: 85%;
-    height: 15em;
+    height: auto;
     background-color: var(--white);
     position: absolute;
     border-radius: 14px;
-    padding: 2em;
+    padding: 1em;
     display: none;
     animation: searchPopupShow 0.2s linear;
     box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
     -webkit-box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
+}
+
+.search-popup .search-item {
+    width: auto;
+    height: 4em;
+    margin-bottom: 1em;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.search-popup .search-item:hover {
+    background-color: var(--light-white);
+}
+
+.search-popup .search-item>div {
+    margin-left: 1em;
+}
+
+.search-popup .search-item .image-item {
+    width: 5em;
+    height: 100%;
+    overflow: hidden;
+}
+
+.search-popup .search-item .info-item {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.search-popup .search-item .info-item h4 {
+    line-height: 1em;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.search-popup .search-item .image-item img {
+    width: 100%;
+}
+
+.flex.flex-head-search {
+    align-items: center;
+}
+
+.flex.flex.flex-head-search h6 {
+    margin-right: 0.5em;
 }
 
 @keyframes searchPopupShow {
