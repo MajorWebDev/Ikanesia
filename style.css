@@ -95,9 +95,9 @@ a {
     padding-right: 1em;
 }
 
-.search-form form {
-    position: relative;
+.search-form .form {
     width: 100%;
+    position: relative;
 }
 
 .search-form input[type=text] {

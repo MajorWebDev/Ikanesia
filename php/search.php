@@ -9,7 +9,7 @@ function rupiah($angka){
 
 
 if (isset($_GET['search'])) {
-    $key = $_GET['search'];
+    $key = $con -> real_escape_string(preg_replace('/\s/', ' ',$_GET['search']));
     $sql = "SELECT * FROM ikan WHERE nama LIKE %$key%";
     /*$result = $con->query($sql);
     if ($result->num_rows > 0) {
