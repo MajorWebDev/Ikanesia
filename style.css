@@ -197,7 +197,7 @@ a {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 836px) {
     .header {
         flex-direction: column;
         height: 5em;
@@ -303,12 +303,14 @@ a {
 .content .left {
     height: 100%;
     flex: 1;
+    overflow: hidden;
 }
 
 .content .right {
     height: 100%;
     flex: 1;
     width: 100%;
+    overflow: hidden;
 }
 
 .flex.flex-box {
@@ -449,9 +451,15 @@ a {
     margin-bottom: 5%;
 }
 
-.splide_news {
+.spliderbox {
+    width: auto;
+    display: flex;
+    justify-content: space-around;
     padding-left: 5%;
-    width: 40em;
+}
+
+.splide_news {
+    width: 80%;
 }
 
 .splide_news .splide_list_news {
@@ -471,7 +479,8 @@ a {
     box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .box-item .image {
@@ -623,7 +632,7 @@ a {
     margin-top: 1.5em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 836px) {
     .content {
         display: block;
         margin-top: 3em;
@@ -640,9 +649,14 @@ a {
         width: 90%;
         height: 15em;
     }
+    .spliderbox {
+        width: auto;
+        padding-left: 0;
+    }
     .splide_news {
         padding-left: 2%;
-        width: 98%;
+        padding-right: 0;
+        width: 100%;
     }
     .box-item {
         width: 11em;
@@ -754,7 +768,7 @@ a {
     color: var(--green);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 836px) {
     .footer {
         display: block;
     }

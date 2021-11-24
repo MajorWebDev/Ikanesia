@@ -29,40 +29,17 @@
         <h3>Terbaru, nih</h3>
         <hr width="200px">
         <br>
-        <div class="splide splide_news">
-            <div class="splide__track">
-                <ul class="splide__list splide_news_list" style="height: 23em; padding-top: 2em;">
-                    <?php
+        <div class="spliderbox">
+            <div class="splide splide_news">
+                <div class="splide__track">
+                    <ul class="splide__list splide_news_list" style="height: 23em; padding-top: 2em;">
+                        <?php
                         include 'php/ikan_news.php'
                     ?>
-                </ul>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <!--<div class="flex flex-news">
-            <button class="arrow">
-                <ion-icon name="chevron-back"></ion-icon>
-            </button>
-
-            <div class="box-item">
-                <div class="image">
-                    <img src="img/ikan1.png">
-                </div>
-                <h4>Ikan 11</h4>
-                <h3>Rp. 99.999,-</h3>
-
-                <div class="flex flex-box-button">
-                    <button class="fav"><img src="img/ico/heart.svg" style="width: 24px;"></button>
-                    <button class="buy">Beli Ikan</button>
-                </div>
-            </div>
-            <div class="box-item">
-                AA
-            </div>
-            <button class="arrow">
-                <ion-icon name="chevron-forward"></ion-icon>
-            </button>
-        </div>-->
     </div>
     <div class="right">
         <div class="flex flex-title">
