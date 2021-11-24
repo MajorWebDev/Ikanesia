@@ -32,48 +32,9 @@
         <div class="splide splide_news">
             <div class="splide__track">
                 <ul class="splide__list splide_news_list" style="height: 23em; padding-top: 2em;">
-                    <li class="splide__slide">
-                        <div class="box-item">
-                            <div class="image">
-                                <img class="lazy" data-src="img/ikan1.png">
-                            </div>
-                            <h4>Ikan 11</h4>
-                            <h3>Rp. 99.999,-</h3>
-
-                            <div class="flex flex-box-button">
-                                <button class="fav"><img src="img/ico/heart.svg" style="width: 24px;"></button>
-                                <a class="buy" href="?item=1">Beli Ikan</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="box-item">
-                            <div class="image">
-                                <img class="lazy" data-src="img/ikan2.png">
-                            </div>
-                            <h4>Ikan 12</h4>
-                            <h3>Rp. 97.999,-</h3>
-
-                            <div class="flex flex-box-button">
-                                <button class="fav"><img src="img/ico/heart.svg" style="width: 24px;"></button>
-                                <button class="buy">Beli Ikan</button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
-                        <div class="box-item">
-                            <div class="image">
-                                <img class="lazy" data-src="img/ikan3.png">
-                            </div>
-                            <h4>Ikan 13</h4>
-                            <h3>Rp. 96.999,-</h3>
-
-                            <div class="flex flex-box-button">
-                                <button class="fav"><img src="img/ico/heart.svg" style="width: 24px;"></button>
-                                <button class="buy">Beli Ikan</button>
-                            </div>
-                        </div>
-                    </li>
+                    <?php
+                        include 'php/ikan_news.php'
+                    ?>
                 </ul>
             </div>
         </div>

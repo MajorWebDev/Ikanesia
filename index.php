@@ -11,10 +11,10 @@ if (isset($_GET['item'])) {
         include 'item/index.php';
     }
     else {
-        include 'content.html';
+        include 'content.php';
     }
 }
 else {
-    include 'content.html';
+    include 'content.php';
 }
 include 'footer.html';
