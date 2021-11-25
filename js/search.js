@@ -13,6 +13,7 @@ new Vue({
                 document.getElementById("btn-search").style.backgroundColor = "var(--green)";
                 document.getElementById("search-ico").style.fill = "var(--white)";
                 document.getElementById("search-popup").style.display = "block";
+                document.getElementById("search-popup").style.height = "auto";
                 document.getElementById("result-search").innerHTML = `
                 <div class="load-search-item">
                     <img src="img/ico/loading-green.svg">
@@ -22,6 +23,12 @@ new Vue({
                 `;
                 let d = this.inputSearch;
                 setTimeout(function() {
+                    const mediaQuery = window.matchMedia('(max-width: 768px)')
+                    if (mediaQuery.matches) {
+                        document.getElementById("search-popup").style.height = "30em";
+                    } else {
+                        document.getElementById("search-popup").style.height = "auto";
+                    }
                     JavaScript: ReqData('php/search.php?search=' + d, 'result-search')
                     return false
                 }, 1000)

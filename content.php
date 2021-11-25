@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" id="content">
     <div class="left">
         <div class="flex flex-box">
             <div class="slider-box">
@@ -154,4 +154,4 @@
         </div>
     </div>
 </div>
-<script src="js/content.js"/></script>
+<script src="js/content.js" /></script>

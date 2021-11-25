@@ -144,6 +144,11 @@ a {
     box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
     -webkit-box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 2px 5px 35px -10px rgba(0, 0, 0, 0.24);
+    overflow-y: scroll;
+}
+
+.search-form .search-popup::-webkit-scrollbar {
+    display: none;
 }
 
 .search-popup .search-item {

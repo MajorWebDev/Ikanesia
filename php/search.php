@@ -46,7 +46,7 @@ if (isset($_GET['search'])) {
         }   
     }
     else {
-        echo "Item tidak ditemukan";
+        echo "<p id='not-found'>Item tidak ditemukan</p>";
     } 
 }
 else {
