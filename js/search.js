@@ -13,7 +13,19 @@ new Vue({
                 document.getElementById("btn-search").style.backgroundColor = "var(--green)";
                 document.getElementById("search-ico").style.fill = "var(--white)";
                 document.getElementById("search-popup").style.display = "block";
-                JavaScript: ReqData('php/search.php?search=' + this.inputSearch, 'result-search')
+                document.getElementById("result-search").innerHTML = `
+                <div class="load-search-item">
+                    <img src="img/ico/loading-green.svg">
+                    Mohon Tunggu, yay!
+                </div>
+                
+                `;
+                let d = this.inputSearch;
+                setTimeout(function() {
+                    JavaScript: ReqData('php/search.php?search=' + d, 'result-search')
+                    return false
+                }, 1000)
+
 
             } else {
                 document.getElementById("btn-search").style.backgroundPosition = "0 0";

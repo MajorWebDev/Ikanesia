@@ -156,6 +156,20 @@ a {
     cursor: pointer;
 }
 
+.search-popup .load-search-item {
+    height: 10em;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.search-popup .load-search-item img {
+    width: 20%;
+}
+
 .search-popup .search-item:hover {
     background-color: var(--light-white);
 }
