@@ -46,7 +46,12 @@ if (isset($_GET['search'])) {
         }   
     }
     else {
-        echo "<p id='not-found'>Item tidak ditemukan</p>";
+        ?>
+        <div class="not-found">
+            <img src='img/ico/search-not-found.svg'>
+            <p id='not-found'>Mohon maaf, Hasil tidak ditemukan</p>
+        </div>
+        <?php
     } 
 }
 else {

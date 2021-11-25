@@ -220,6 +220,24 @@ a {
     background-color: var(--light-white);
 }
 
+.search-popup .not-found {
+    display: flex;
+    flex-direction: column;
+    height: 20em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.search-popup .not-found img {
+    width: 50%;
+    margin-bottom: 2em;
+}
+
+.search-popup .not-found p {
+    text-align: center;
+}
+
 .flex.flex-head-search {
     align-items: center;
 }
