@@ -307,6 +307,9 @@ a {
 }
 
 @media (max-width: 836px) {
+    .wrapper {
+        width: 100%;
+    }
     .header {
         flex-direction: column;
         height: 5em;
