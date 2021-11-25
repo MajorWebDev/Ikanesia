@@ -580,7 +580,7 @@ a {
 }
 
 .box-item {
-    width: 12em;
+    width: 90%;
     height: 100%;
     background-color: var(--white);
     border-radius: 14px;
@@ -675,8 +675,9 @@ a {
 .flex.flex-item-box {
     height: auto;
     padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
 }
 
 .flex.flex-item-box>div {
