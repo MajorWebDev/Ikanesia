@@ -10,6 +10,10 @@ var splide = new Splide('.splide', {
     perPage: page,
     perMove: 1,
     height: '20em',
+    classes: {
+        pagination: 'page',
+        page: 'page',
+    }
 });
 
 splide.mount();
