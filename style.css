@@ -20,6 +20,15 @@ body {
     color: var(--black);
 }
 
+.bg-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper {
+    width: calc(100% / 1.1);
+}
+
 button {
     border: none;
     background-color: inherit;
@@ -559,7 +568,7 @@ a {
 }
 
 .splide_news {
-    width: 90%;
+    width: 100%;
 }
 
 .splide_news .splide_list_news {

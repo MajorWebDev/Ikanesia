@@ -46,21 +46,4 @@ function closeMenu() {
 
 /*
 document.getElementById("input-search").addEventListener("focusin", searchFocus);
-document.getElementById("input-search").addEventListener("focusout", searchBlur);
-
-function searchFocus() {
-    document.getElementById("btn-search").style.backgroundPosition = "100% 0";
-    document.getElementById("btn-search").style.backgroundColor = "var(--green)";
-    document.getElementById("search-ico").style.fill = "var(--white)";
-    document.getElementById("search-popup").style.display = "block";
-
-}
-
-function searchBlur() {
-    document.getElementById("btn-search").style.backgroundPosition = "0 0";
-    document.getElementById("btn-search").style.backgroundColor = "#f9f9f9";
-    document.getElementById("search-ico").style.fill = "var(--light-black)";
-    document.getElementById("search-popup").style.display = "none";
-}
-
 */
