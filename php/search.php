@@ -18,7 +18,7 @@ if (isset($_GET['search'])) {
         
         }
     }*/
-    $result = $con->query("SELECT * FROM ikan WHERE nama LIKE '%$key%'");
+    $result = $con->query("SELECT * FROM ikan WHERE nama LIKE '%$key%' LIMIT 5");
     if ($result->num_rows > 0) {
         ?>
         <div class="flex flex-head-search">
@@ -39,7 +39,10 @@ if (isset($_GET['search'])) {
                     Harga <?php echo rupiah($row['harga']) ?>
                 </div>
             </div>
-    <?php
+            <?php
+        }
+        if ($result->num_rows == 5) {
+            echo "<a href='#' class='search-item-more'>Lihat Lainnya</a>";
         }   
     }
     else {

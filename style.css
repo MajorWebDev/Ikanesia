@@ -202,6 +202,19 @@ a {
     width: 100%;
 }
 
+.search-popup a.search-item-more {
+    display: flex;
+    height: 3em;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.search-popup a.search-item-more:hover {
+    background-color: var(--light-white);
+}
+
 .flex.flex-head-search {
     align-items: center;
 }
