@@ -53,7 +53,7 @@
                 </div>
                 <div class="info">
                     {{ d.nama }}
-                    <br><span class="price">Rp. {{ d.harga }}</span>
+                    <br><span class="price">{{ rupiah(d.harga) }}</span>
                     <br>
                     <a href="#">Beli Ikan</a>
                 </div>
