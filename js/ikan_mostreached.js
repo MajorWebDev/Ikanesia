@@ -1,3 +1,5 @@
+Vue.use(VueLazyload);
+
 var root = new Vue({
     el: '#mostReachedIkan',
     data() {

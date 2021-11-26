@@ -46,7 +46,7 @@
         <div class="flex flex-item-box" id="mostReachedIkan">
             <div class="box-item-2" v-for="d in info">
                 <div class="img">
-                    <img v-bind:src="'_asset/upload_gambar/'+d.gambar" width="100%">
+                    <img v-lazy="'_asset/upload_gambar/'+d.gambar" width="100%">
                 </div>
                 <div class="rating">
                     <ion-icon name="star"></ion-icon><br> 5/5
