@@ -14,3 +14,4 @@ Framework Usage :<br>
 <br>
 Library Usage<br>
 ● SplideJS<br>
+● VueLazyLoad<br>
