@@ -33,9 +33,7 @@
             <div class="splide splide_news">
                 <div class="splide__track">
                     <ul class="splide__list splide_news_list" style="height: 23em; padding-top: 2em;">
-                        <?php
-                        include 'php/ikan_news.php'
-                    ?>
+                        <?php include 'php/ikan_news.php'; ?>
                     </ul>
                 </div>
             </div>
@@ -45,45 +43,17 @@
         <div class="flex flex-title">
             <h3>Paling banyak dicari</h3> <a href="#">Lihat Semua <ion-icon name="chevron-forward"></ion-icon></a></div>
         <hr width="230px">
-        <div class="flex flex-item-box">
-            <div class="box-item-2">
+        <div class="flex flex-item-box" id="mostReachedIkan">
+            <div class="box-item-2" v-for="d in info">
                 <div class="img">
-                    <img class="lazy" data-src="img/ikan1.png" width="100%">
+                    <img v-bind:src="'_asset/upload_gambar/'+d.gambar" width="100%">
                 </div>
                 <div class="rating">
                     <ion-icon name="star"></ion-icon><br> 5/5
                 </div>
                 <div class="info">
-                    Ikan Dicari
-                    <br><span class="price">Rp. 29.777</span>
-                    <br>
-                    <a href="#">Beli Ikan</a>
-                </div>
-            </div>
-            <div class="box-item-2">
-                <div class="img">
-                    <img class="lazy" data-src="img/ikan2.png" width="100%">
-                </div>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon><br> 4.8/5
-                </div>
-                <div class="info">
-                    Ikan Dicari 1
-                    <br><span class="price">Rp. 25.777</span>
-                    <br>
-                    <a href="#">Beli Ikan</a>
-                </div>
-            </div>
-            <div class="box-item-2">
-                <div class="img">
-                    <img class="lazy" data-src="img/ikan3.png" width="100%">
-                </div>
-                <div class="rating">
-                    <ion-icon name="star-half"></ion-icon><br> 4.5/5
-                </div>
-                <div class="info">
-                    Ikan Dicari
-                    <br><span class="price">Rp. 23.777</span>
+                    {{ d.nama }}
+                    <br><span class="price">Rp. {{ d.harga }}</span>
                     <br>
                     <a href="#">Beli Ikan</a>
                 </div>
@@ -155,3 +125,4 @@
     </div>
 </div>
 <script src="js/content.js" /></script>
+<script src="js/ikan_mostreached.js"></script>

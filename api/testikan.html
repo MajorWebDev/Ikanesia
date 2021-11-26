@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        API Ikan
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="errored">error</div>
+        <div v-if="loading">Load..</div>
+        <div v-for="a in info">
+            Ikan : {{ a.nama }}
+            <br>
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    info: null,
+                    loading: true,
+                    errored: false
+                }
+            },
+            filters: {
+                currencydecimal(value) {
+                    return value.toFixed(2)
+                }
+            },
+            mounted() {
+                axios
+                    .get('ikanesia_api.php?function=get_ikan')
+                    .then(response => {
+                        this.info = response.data.data
+                    })
+                    .catch(error => {
+                        console.log(error)
+                        this.errored = true
+                    })
+                    .finally(() => this.loading = false)
+            }
+        })
+    </script>
+</body>
