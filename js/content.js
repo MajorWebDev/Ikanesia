@@ -1,5 +1,5 @@
 let page = 3;
-const mediaQuery = window.matchMedia('(max-width: 768px)')
+const mediaQuery = window.matchMedia('(max-width: 480px)')
 if (mediaQuery.matches) {
     page = 2;
 } else {

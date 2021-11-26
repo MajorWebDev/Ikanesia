@@ -597,6 +597,13 @@ a {
     -moz-box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
     margin-left: 5%;
     margin-right: 5%;
+    padding: 0.2em;
+}
+
+.box-item .item-info {
+    display: block;
+    width: 100%;
+    text-align: left;
 }
 
 .box-item .image {
@@ -617,18 +624,15 @@ a {
 .box-item h4 {
     color: black;
     font-weight: 600;
-    width: 100%;
-    padding-left: 1em;
+    width: auto;
+    padding: 0 0.5em 0 0.5em;
     margin-bottom: 0;
-    line-break: loose;
     line-height: 1em;
-    padding-right: 5px;
 }
 
 .box-item h3 {
     color: var(--green);
-    width: 100%;
-    padding-left: 0.5em;
+    width: auto;
 }
 
 .flex.flex-box-button {
@@ -691,7 +695,7 @@ a {
 
 .flex.flex-item-box .box-item-2 {
     width: 15em;
-    height: 6em;
+    height: auto;
     background-color: var(--white);
     border-radius: 12px;
     padding: 0.5em;
@@ -708,9 +712,15 @@ a {
 
 .flex.flex-item-box .img {
     width: 5.5em;
-    height: 100%;
+    height: 70%;
     border-radius: 10px;
     overflow: hidden;
+}
+
+.flex.flex-item-box img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
     object-fit: cover;
 }
 
@@ -784,16 +794,18 @@ a {
     }
     .flex.flex-item-box .box-item-2 {
         width: auto;
-        height: 7em;
+        height: auto;
         background-color: var(--white);
         border-radius: 12px;
         padding: 0.5em;
         display: flex;
         position: relative;
+        display: block;
+        overflow: hidden;
     }
     .flex.flex-item-box .img {
-        width: 4.5em;
-        height: 70%;
+        width: 100%;
+        height: 50%;
     }
     .flex.flex-item-box .box-item-2>div {
         margin-right: 0.5em;
@@ -803,11 +815,14 @@ a {
     }
     .flex.flex-item-box .rating {
         font-size: 8px;
-        right: 23%;
-        top: 37%;
+        right: -0.5em;
+        top: 0;
+        padding: 0.5em;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: rgb(253, 253, 117);
+        border-bottom-left-radius: 7px;
     }
     .flex.flex-item-box .info a {
         text-decoration: none;
@@ -818,8 +833,7 @@ a {
         font-size: 14px;
         border-radius: 7px;
         margin-top: 3em;
-        margin-left: -5.7em;
-        width: 150%;
+        width: auto;
         display: flex;
         justify-content: center;
     }

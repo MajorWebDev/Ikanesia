@@ -44,9 +44,9 @@
             <h3>Paling banyak dicari</h3> <a href="#">Lihat Semua <ion-icon name="chevron-forward"></ion-icon></a></div>
         <hr width="230px">
         <div class="flex flex-item-box" id="mostReachedIkan">
-            <div class="box-item-2" v-for="d in info">
+            <div class="box-item-2" v-for="d in info.slice(0, 4)">
                 <div class="img">
-                    <img v-lazy="'_asset/upload_gambar/'+d.gambar" width="100%">
+                    <img v-lazy="'_asset/upload_gambar/'+d.gambar">
                 </div>
                 <div class="rating">
                     <ion-icon name="star"></ion-icon><br> 5/5
