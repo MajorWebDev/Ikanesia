@@ -10,12 +10,7 @@ if(isset($_SESSION['user'])) {
 } 
 
 if (isset($_GET['item'])) {
-    if ($_GET['item'] == 1) {
-        include 'item/index.php';
-    }
-    else {
-        include 'content.php';
-    }
+    include 'item/index.php';
 }
 else {
     include 'content.php';

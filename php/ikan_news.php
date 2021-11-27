@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 
                 <div class="flex flex-box-button">
                     <button class="fav"><img src="img/ico/heart.svg" style="width: 24px;"></button>
-                    <a class="buy" href="?item=1">Beli Ikan</a>
+                    <a class="buy" href="?item=<?php echo $row['id_ikan'] ?>">Beli Ikan</a>
                 </div>
             </div>
         </div>

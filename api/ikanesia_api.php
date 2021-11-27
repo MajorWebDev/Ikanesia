@@ -6,10 +6,16 @@ require_once "../_config/config.php";
    function get_ikan()
    {
       global $con;      
-      $query = $con->query("SELECT * FROM ikan");            
+      if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $query = $con->query("SELECT * FROM ikan WHERE id_ikan = '$id'");
+      }
+      else {
+         $query = $con->query("SELECT * FROM ikan");
+      }            
       while($row=mysqli_fetch_object($query))
       {
-         $data[] =$row;
+         $data[] = $row;
       }
       $response=array(
                      'status' => 1,

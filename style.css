@@ -3,6 +3,7 @@
     /* warna */
     --white: #F1F5F9;
     --green: #10B981;
+    --green-dark: #0c9c6c;
     --black: #1E293B;
     --light-black: #64748B;
     --red: #F87171;
@@ -849,23 +850,72 @@ a {
 }
 
 .single .container {
-    display: block;
-    width: 80%;
-    background-color: var(--white);
-    border-radius: 22px;
-    box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
-    -webkit-box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 5px 35px -10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    width: 100%;
     padding: 2em;
+    justify-content: space-around;
+}
+
+.single .container>div {
+    margin-right: 5%;
+}
+
+.single .container .info-item {
+    display: block;
+    flex: 2;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.single .container h2 {
+    line-height: 1em;
+}
+
+.single .container h4 {
+    line-height: 1em;
+    font-weight: 500;
+}
+
+.single .container h2.price {
+    color: var(--green);
 }
 
 .single .container .image_post {
     display: flex;
     overflow: hidden;
+    width: 25%;
+    height: 20em;
+}
+
+.single .container .image_post img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    width: 15em;
-    height: 12em;
-    border-radius: 8px;
+}
+
+.single .container .info-item .button-frame {
+    display: flex;
+    width: 100%;
+    height: 5em;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 5%;
+}
+
+.single .container .info-item a.button-buy {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5%;
+    background-color: var(--green);
+    left: 0;
+    color: white;
+}
+
+.single .container .info-item a.button-buy:hover {
+    background-color: var(--green-dark);
 }
 
 .footer {

@@ -64,59 +64,17 @@
             <h3>Cupang</h3> <a href="#">Lihat Semua <ion-icon name="chevron-forward"></ion-icon></a>
         </div>
         <hr width="150px">
-        <div class="flex flex-item-box">
-            <div class="box-item-2">
+        <div class="flex flex-item-box" id="cupang">
+            <div class="box-item-2" v-for="d in info.slice(0, 4)">
                 <div class="img">
-                    <img class="lazy" data-src="img/ikan1.png" width="100%">
+                    <img v-lazy="'_asset/upload_gambar/'+d.gambar">
                 </div>
                 <div class="rating">
                     <ion-icon name="star"></ion-icon><br> 5/5
                 </div>
                 <div class="info">
-                    Ikan Dicari
-                    <br><span class="price">Rp. 29.777</span>
-                    <br>
-                    <a href="#">Beli Ikan</a>
-                </div>
-            </div>
-            <div class="box-item-2">
-                <div class="img">
-                    <img class="lazy" data-src="img/ikan2.png" width="100%">
-                </div>
-                <div class="rating">
-                    <ion-icon name="star"></ion-icon><br> 4.8/5
-                </div>
-                <div class="info">
-                    Cupang 1
-                    <br><span class="price">Rp. 25.773</span>
-                    <br>
-                    <a href="#">Beli Ikan</a>
-                </div>
-            </div>
-            <div class="box-item-2">
-                <div class="img">
-                    <img class="lazy" data-src="img/ikan3.png" width="100%">
-                </div>
-                <div class="rating">
-                    <ion-icon name="star-half"></ion-icon><br> 4.5/5
-                </div>
-                <div class="info">
-                    Ikan Dicari
-                    <br><span class="price">Rp. 23.777</span>
-                    <br>
-                    <a href="#">Beli Ikan</a>
-                </div>
-            </div>
-            <div class="box-item-2">
-                <div class="img">
-                    <img class="lazy" data-src="img/poster2.png" height="100%">
-                </div>
-                <div class="rating">
-                    <ion-icon name="star-half"></ion-icon><br> 4.5/5
-                </div>
-                <div class="info">
-                    Ikan Dicari
-                    <br><span class="price">Rp. 23.777</span>
+                    {{ d.nama }}
+                    <br><span class="price">{{ rupiah(d.harga) }}</span>
                     <br>
                     <a href="#">Beli Ikan</a>
                 </div>
@@ -126,3 +84,4 @@
 </div>
 <script src="js/content.js" /></script>
 <script src="js/ikan_mostreached.js"></script>
+<script src="js/ikan_cupang.js"></script>
