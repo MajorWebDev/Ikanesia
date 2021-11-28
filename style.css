@@ -843,7 +843,7 @@ a {
 
 .single {
     display: flex;
-    height: 500px;
+    height: auto;
     margin-top: 5em;
     justify-content: space-around;
     padding: 3em;
@@ -951,6 +951,23 @@ a {
 }
 
 @media (max-width: 836px) {
+    .single {
+        padding: 0;
+    }
+    .single .container {
+        display: block;
+    }
+    .single .container>div {
+        margin-right: 0;
+    }
+    .single .container .image_post {
+        width: auto;
+        height: 20em;
+    }
+    .single .container .info-item .button-frame {
+        position: relative;
+        margin-top: 5em;
+    }
     .footer {
         display: block;
     }
