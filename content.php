@@ -52,8 +52,8 @@
                     <ion-icon name="star"></ion-icon><br> 5/5
                 </div>
                 <div class="info">
-                    {{ d.nama }}
-                    <br><span class="price">{{ rupiah(d.harga) }}</span>
+                    <h3>{{ d.nama }}</h3>
+                    <h3 class="price">{{ rupiah(d.harga) }}</h3>
                     <br>
                     <a href="#">Beli Ikan</a>
                 </div>
@@ -73,8 +73,8 @@
                     <ion-icon name="star"></ion-icon><br> 5/5
                 </div>
                 <div class="info">
-                    {{ d.nama }}
-                    <br><span class="price">{{ rupiah(d.harga) }}</span>
+                    <h3>{{ d.nama }}</h3>
+                    <h3 class="price">{{ rupiah(d.harga) }}</h3>
                     <br>
                     <a href="#">Beli Ikan</a>
                 </div>

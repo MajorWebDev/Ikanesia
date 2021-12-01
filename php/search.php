@@ -28,17 +28,19 @@ if (isset($_GET['search'])) {
         <?php
         foreach($result as $row) {
         ?>
-            <div class="search-item">
-                <div class="image-item">
-                    <img src="_asset/upload_gambar/<?php echo $row['gambar'] ?>" />
-            </div>
-            <div class="info-item">
-                <h4>
-                    <?php echo $row['nama'] ?>
-                </h4>
-                    Harga <?php echo rupiah($row['harga']) ?>
+            <a href="?item=<?php echo $row['id_ikan'] ?>">
+                <div class="search-item">
+                    <div class="image-item">
+                        <img src="_asset/upload_gambar/<?php echo $row['gambar'] ?>" />
                 </div>
-            </div>
+                <div class="info-item">
+                    <h4>
+                        <?php echo $row['nama'] ?>
+                    </h4>
+                        Harga <?php echo rupiah($row['harga']) ?>
+                    </div>
+                </div>
+            </a>
             <?php
         }
         if ($result->num_rows == 5) {

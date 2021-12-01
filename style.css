@@ -684,7 +684,7 @@ a {
 
 .flex.flex-item-box {
     height: auto;
-    padding: 1em;
+    padding: 1em 1em 1em 2em;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
@@ -696,7 +696,7 @@ a {
 }
 
 .flex.flex-item-box .box-item-2 {
-    width: 15em;
+    width: calc(100% / 1.2);
     height: auto;
     background-color: var(--white);
     border-radius: 12px;
@@ -731,8 +731,13 @@ a {
     position: relative;
 }
 
-.flex.flex-item-box .info .price {
-    font-size: 14px;
+.flex.flex-item-box .info h3 {
+    line-height: 1em;
+    margin: 5px 0 2px 0;
+}
+
+.flex.flex-item-box .info h3.price {
+    font-size: 18px;
     color: var(--green);
     font-weight: 600;
 }
