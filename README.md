@@ -11,6 +11,7 @@ Language Usage :<br>
 <br>
 Framework Usage :<br>
 ● VueJS<br>
+● Bootstrap 4.6<br>
 <br>
 Library Usage<br>
 ● SplideJS<br>
