@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2021 at 06:33 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Jan 13, 2022 at 02:34 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,20 +33,21 @@ CREATE TABLE `ikan` (
   `nama` varchar(100) NOT NULL,
   `deskripsi` varchar(500) NOT NULL,
   `harga` int(20) NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL,
+  `rating` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `ikan`
 --
 
-INSERT INTO `ikan` (`id_ikan`, `gambar`, `nama`, `deskripsi`, `harga`, `status`) VALUES
-(1, '899165128_58275138_hiu.jpeg', 'Halfmoon Super Red', 'Usia Indukan, Size Induk, Kualitas Jos', 50000, 'Ada'),
-(2, '477562808_1734055087_ikan1.jpg', 'Plakat White Platinum', 'Ikan sangat berkualitas', 100000, 'Ada'),
-(3, '1659166950_hiu.jpeg', 'Crowntail Besgel HM', 'Ikan Murahan banget', 10005, 'Habis'),
-(10, '1592295970_1734055087_ikan1.jpg', 'Crowntail Super Black', 'Size Indukan', 1000000, 'Habis'),
-(11, '1661645720_626084550_besgel.jpg', 'Plakat Female', 'Ikan Ajaib', 80000, 'Ada'),
-(12, '1649213747_1477046682_besgel.jpg', 'Plakat Besgel Avatar', 'Ikan Murah banget', 5000, 'Ada');
+INSERT INTO `ikan` (`id_ikan`, `gambar`, `nama`, `deskripsi`, `harga`, `status`, `rating`) VALUES
+(1, '899165128_58275138_hiu.jpeg', 'Halfmoon Super Red', 'Usia Indukan, Size Induk, Kualitas Jos', 50000, 'Ada', 3.5),
+(2, '477562808_1734055087_ikan1.jpg', 'Plakat White Platinum', 'Ikan sangat berkualitas', 100000, 'Ada', 4),
+(3, '1659166950_hiu.jpeg', 'Crowntail Besgel HM', 'Ikan Murahan banget', 10005, 'Habis', NULL),
+(10, '1592295970_1734055087_ikan1.jpg', 'Crowntail Super Black', 'Size Indukan', 1000000, 'Habis', NULL),
+(11, '1661645720_626084550_besgel.jpg', 'Plakat Female', 'Ikan Ajaib', 80000, 'Ada', NULL),
+(12, '1649213747_1477046682_besgel.jpg', 'Plakat Besgel Avatar', 'Ikan Murah banget', 5000, 'Ada', NULL);
 
 -- --------------------------------------------------------
 
