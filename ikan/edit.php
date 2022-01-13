@@ -74,8 +74,10 @@ if (!isset($_SESSION['user'])) {
                     <option value="Habis">Habis</option>
                     <option value="Ada">Ada</option> <?php
                 }
-            ?>
-        </select>
+            ?> 
+        </select> <br>
+		<label for="ikan">Rating</label>
+        <input type="text" name="rating" id="rating" value="<?=$data['rating']?>" required> <br>
         <div class="pull-right">
             <input type="submit" name="edit" value="Simpan" class="btn btn-success">
         </div>

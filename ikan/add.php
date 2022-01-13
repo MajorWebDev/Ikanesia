@@ -50,6 +50,8 @@
             <option value="Ada">Ada</option>
             <option value="Habis">Habis</option>
         </select>     <br>               
+        <label for="ikan">Rating</label>
+		<input type="text" name="rating" id="rating"> <br>
         <input type="submit" name="add" value="Simpan">
     </form>    
 </body>

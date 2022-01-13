@@ -12,6 +12,7 @@ if(isset($_POST['add'])) {
     $deskripsi = trim(mysqli_real_escape_string($con, $_POST['deskripsi']));
     $harga = trim(mysqli_real_escape_string($con, $_POST['harga']));
     $status = trim(mysqli_real_escape_string($con, $_POST['status']));
+    $rating = trim(mysqli_real_escape_string($con, $_POST['rating']));
 
 
     if(!in_array($ext,$ekstensi) ) {
@@ -20,7 +21,7 @@ if(isset($_POST['add'])) {
         if($ukuran < 1044070){		
             $xx = $rand.'_'.$filename;
             move_uploaded_file($_FILES['gambar']['tmp_name'], '../_asset/upload_gambar/'.$rand.'_'.$filename);
-            mysqli_query($con, "INSERT INTO ikan (gambar, nama, deskripsi, harga, status) VALUES ('$xx','$nama','$deskripsi','$harga','$status')") or die (mysqli_error($con));
+            mysqli_query($con, "INSERT INTO ikan (gambar, nama, deskripsi, harga, status, rating) VALUES ('$xx','$nama','$deskripsi','$harga','$status','$rating')") or die (mysqli_error($con));
             header("location:add.php?alert=berhasil");
         }else{
             header("location:add.php?alert=gagal_ukuran");
@@ -33,6 +34,7 @@ if(isset($_POST['add'])) {
     $deskripsi = trim(mysqli_real_escape_string($con, $_POST['deskripsi']));
     $harga = trim(mysqli_real_escape_string($con, $_POST['harga']));
     $status = trim(mysqli_real_escape_string($con, $_POST['status']));
+    $rating = trim(mysqli_real_escape_string($con, $_POST['rating']));
 
     if($filename != "") {
         $rand = rand();
@@ -52,7 +54,7 @@ if(isset($_POST['add'])) {
             if($ukuran < 1044070){	
                 $xx = $rand.'_'.$filebaru;
                 move_uploaded_file($_FILES['gambar']['tmp_name'], '../_asset/upload_gambar/'.$rand.'_'.$filebaru);
-                mysqli_query($con, "UPDATE ikan SET gambar = '$xx', nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
+                mysqli_query($con, "UPDATE ikan SET gambar = '$xx', nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status', rating = '$rating' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
                 header("location:edit.php?id_ikan=$id_ikan&alert=berhasil");
 				
 				if(file_exists($patch)){
@@ -63,7 +65,7 @@ if(isset($_POST['add'])) {
             }
         }
     } else {
-        mysqli_query($con, "UPDATE ikan SET nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
+        mysqli_query($con, "UPDATE ikan SET nama = '$nama', deskripsi = '$deskripsi', harga = '$harga', status = '$status', rating = '$rating' WHERE id_ikan = '$id_ikan'") or die (mysqli_error($con));
         header("location:edit.php?id_ikan=$id_ikan&alert=berhasil");
     }
 }

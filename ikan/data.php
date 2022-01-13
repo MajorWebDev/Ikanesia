@@ -30,6 +30,7 @@ if (!isset($_SESSION['user'])) {
                 <th>Deskripsi</th>
                 <th>Harga</th>
                 <th>Status</th>
+				<th>Rating</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -71,6 +72,7 @@ if (!isset($_SESSION['user'])) {
                         <td><?=$data['deskripsi']?></td>
                         <td><?=$data['harga']?></td>
                         <td><?=$data['status']?></td>
+                        <td><?=$data['rating']?></td>
                         <td class="text-center">
                         <a href="edit.php?id_ikan=<?=$data['id_ikan']?>">Ubah</a> | 
                         <a href="delete.php?id_ikan=<?=$data['id_ikan']?>" onclick="return confirm('Yakin akan menghapus data?')">Hapus</a>
