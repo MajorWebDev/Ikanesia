@@ -10,7 +10,7 @@
     }
     //Function Base Url
     function base_url($url = null) {
-        $base_url = "https://adminmfstore.cleverapps.io/";
+        $base_url = "https://adminmfstore.cleverapps.io";
         if($url != null) {
             return $base_url."/".$url;
         } else {
