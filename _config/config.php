@@ -9,7 +9,7 @@
     }
     //Function Base Url
     function base_url($url = null) {
-        $base_url = "http://localhost/Ikanesia";
+        $base_url = "/";
         if($url != null) {
             return $base_url."/".$url;
         } else {
